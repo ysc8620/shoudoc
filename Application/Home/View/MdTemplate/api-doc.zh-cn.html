@@ -4,7 +4,7 @@
 - 用户注册接口
 
 **请求URL：** 
-- ` https://api.zydzuqiu.com/user/register.html `
+- ` https://api.zydzuqiu.com/test/test.html `
   
 **请求方式：**
 - POST 
@@ -17,9 +17,10 @@
 |appid   |是  |string |请求appid   |
 |sign    |是  |string |校验码      |
 |time    |是  |int    |请求时间    |
-|mobile  |是  |string |手机号码    |
-|password|否  |string |密码        |
-|verify  |是  |string |短信验证码  |
+|-|-|-|以上必填|
+|date  |否  |string |请求日期    |
+|remark  |否  |string |测试请求        |
+|last_time|否 |int |1566666600|
 
  **返回示例**
 
@@ -29,11 +30,9 @@
     "msg":"",
     "time":1566666666,
     "data": {
-      "uid": "1",
-      "nickname": "吴系挂",
-      "mobile"  :"手机号码",
-      "reg_time": "1436864169",
-      "last_login_time": "1436864169",
+      "date": "2015-07-20 11:12:12",
+      "remark":"测试请求",,
+      "last_time": "1566666600",
     }
   }
 ```
@@ -43,8 +42,8 @@
 |参数名|类型|说明|
 |:-----  |:-----|-----                           |
 |status  |int   |返回状态码，100：注册成功；     |
-|msg     |string|错误信息，验证码过期            |
-|time    |int   |处理时间，下次请求要带上该时间  |
+|msg     |string|错误信息，例：验证码过期            |
+|time    |int   |本次处理时间，下次请求要带上该时间  |
 |data    |array |具体返回内容                    |
  **备注** 
 
