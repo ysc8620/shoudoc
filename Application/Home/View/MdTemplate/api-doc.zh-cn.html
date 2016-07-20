@@ -46,7 +46,9 @@
 |time    |int   |本次处理时间，下次请求要带上该时间  |
 |data    |array |具体返回内容                    |
  **备注** 
-
+sign 生成规则, appi和appsecret 由服务方提供
+sign = MD5(version + appid + time + appsecret)
+MD5('testsign') = '3ba0e5686cff73d99c63c49491e2927b'
 - 更多返回错误代码请看首页的错误代码描述
 100: 请求成功
 101: 需要登录
