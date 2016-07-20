@@ -131,7 +131,7 @@ return array(
     'close'=>'Close',
     'finish'=>'Finish',
     'api_test_title'=>'Test for GET and POST',
-    'api_address_description'=>'Api address(e.g:ttp://www.abc.com/api/login)',
+    'api_address_description'=>'Api address(e.g:https://api.zydzuqiu.com/test/test.html)',
     'api_address'=>'Api address',
     'params_description'=>'Params(e.g:user_id=121&age=22&date=2016-06-02)',
     'params'=>'Params',
