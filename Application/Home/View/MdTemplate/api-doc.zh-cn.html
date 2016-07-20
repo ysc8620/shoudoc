@@ -12,23 +12,28 @@
 **参数：** 
 
 |参数名|必选|类型|说明|
-|:----    |:---|:----- |-----   |
-|username |是  |string |用户名   |
-|password |是  |string | 密码    |
-|name     |否  |string | 昵称    |
+|:----   |:---|:----- |-----       |
+|version |是  |string |版本号      |
+|appid   |是  |string |请求appid   |
+|sign    |是  |string |校验码      |
+|time    |是  |int    |请求时间    |
+|mobile  |是  |string |手机号码    |
+|password|否  |string |密码        |
+|verify  |是  |string |短信验证码  |
 
  **返回示例**
 
 ``` 
   {
-    "error_code": 0,
+    "status": 100,
+    "msg":"",
+    "time":1566666666,
     "data": {
       "uid": "1",
-      "username": "12154545",
-      "name": "吴系挂",
-      "groupid": 2 ,
+      "nickname": "吴系挂",
+      "mobile"  :"手机号码",
       "reg_time": "1436864169",
-      "last_login_time": "0",
+      "last_login_time": "1436864169",
     }
   }
 ```
@@ -37,9 +42,15 @@
 
 |参数名|类型|说明|
 |:-----  |:-----|-----                           |
-|groupid |int   |用户组id，1：超级管理员；2：普通用户  |
-
+|status  |int   |返回状态码，100：注册成功；     |
+|msg     |string|错误信息，验证码过期            |
+|time    |int   |处理时间，下次请求要带上该时间  |
+|data    |array |具体返回内容                    |
  **备注** 
 
 - 更多返回错误代码请看首页的错误代码描述
+100: 请求成功
+101: 需要登录
+102: 没有权限
+
 
